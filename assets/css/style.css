@@ -1,0 +1,18 @@
+:root {
+    --white: #f8fafc;
+    --gray-light: #797984;
+    --gray-medium: #312d37;
+    --black: #000;
+
+    --purple-light: #c485e0;
+    --purple-medium: #8c46ac;
+    --purple-dark: #5c4681;
+    --purple-darker: #3b2152;
+
+    --color-gradient-light: linear-gradient(90deg, var(--purple-light), var(--purple-medium));
+
+    --color-gradient-dark: linear-gradient(90deg, var(--purple-dark), var(--purple-darker));
+
+    --title-font: 'Poppins', sans-serif;
+    --body-font: 'Nunito', sans-serif;
+}
