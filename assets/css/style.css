@@ -44,9 +44,128 @@
     flex-direction: column;
     align-items: center;
     padding: 28px 38px;
-    gap: 28px;
+    gap: 30px;
+}
+
+#form-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form-header h1 {
+    font-family: var(--title-font);
+    font-size: 26px;
+    font-weight: 500;
+    position: relative; 
+}
+
+#form-header h1::before {
+    background-color: var(--purple-light);
+    width: 40%;
+    height: 3px;
+    position: absolute;
+    content: '';
+    bottom: 5px;
+    border-radius: 4px;
+}
+
+#mode-icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#list-social-media {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #list-social-media img {
     width: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+#list-social-media img:hover {
+    transform: scale(1.1);
+    
+}
+
+/* inputs */
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-box label {
+    font-size: 14px;
+    color: var(--gray-medium);
+
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    cursor: text;
+    border-bottom: 1px solid var(--purple-light);
+}
+
+.input-field i {
+    font-size: 18px;
+    color: var(--purple-dark);
+}
+
+.input-field input {
+    background-color: transparent;
+    color: var(--gray-medium);
+    font-size: 18px;
+
+    width: 260px;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+}
+
+#forgot-password a {
+    text-decoration: none;
+    color: var(--purple-dark);
+    font-size: 12px;
+    display: flex;
+    margin-top: 5px;
+    transition: color 0.2s ease-in-out;
+}
+
+#forgot-password a:hover {
+    color: var(--purple-light);
+}
+
+#login-button {
+    background: var(--purple-medium);
+    color: var(--white);
+
+    border: none;
+    border-radius: 6px;
+    border: 1px solid transparent;
+
+    font-family: var(--title-font);
+    font-size: 16px;
+    font-weight: 500;
+    
+    width: 100%;
+    padding: 8px;
+    
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+#login-button:hover {
+    background: var(--purple-light);
+    border: 1px solid var(--purple-light);
 }
