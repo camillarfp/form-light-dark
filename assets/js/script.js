@@ -17,11 +17,21 @@ mode.addEventListener("click", () => {
     }
 });
 
+function validarEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 function logar() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    if (email == "admin" && password == "admin") {
+    if (!validarEmail(email)) {
+        alert("Por favor, insira um email válido.");
+        return;
+    }
+
+    if (email == "admin@email.com" && password == "admin") {
         location.href = "home.html";
     } else {
         alert("Usuário ou senha inválidos!");
