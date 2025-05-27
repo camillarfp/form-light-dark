@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main id="container">
+        <form id="login-form">
+            <div id="form-header">
+                <h1>Login</h1>
+                <i id="mode-icon" class="fa-solid fa-moon" style="color: #2e273f;"></i>
+            </div>
+
+            <div id="list-social-media">
+                <a href="">
+                    <img src="assets/img/google.png" alt="Google Logo">
+                </a>
+                <a href="">
+                    <img src="assets/img/github.png" alt="GitHub Logo">
+                </a>
+                <a href="">
+                    <img src="assets/img/icons8-instagram-240.png" alt="Instagram Logo">
+                </a>
+            </div>
+
+            <div id="inputs">
+                <div class="input-box">
+                    <label for="name">
+                        Nome
+                        <div class="input-field">
+                            <i class="fa-solid fa-user" style="color: #2e273f;"></i>
+                            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">
+                        Email
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope" style="color: #2e273f;"></i>
+                            <input type="text" id="email" name="email" placeholder="Digite seu email" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">
+                        Senha
+                        <div class="input-field">
+                            <i class="fa-solid fa-key" style="color: #2e273f;"></i>
+                            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                        </div>
+                    </label>
+
+                    <div id="forgot-password">
+                        <a href="#">
+                            Esqueci minha senha
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" id="login-button">
+                Entrar
+            </button>
+        </form>
+    </main>
+</body>
+</html>
