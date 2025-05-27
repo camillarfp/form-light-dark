@@ -8,6 +8,8 @@
     --purple-medium: #8c46ac;
     --purple-dark: #5c4681;
     --purple-darker: #3b2152;
+    --purple-deep: #2a1d44;
+    --purple-deeper: #1d152e;
 
     --color-gradient-light: linear-gradient(90deg, var(--purple-light), var(--purple-medium));
 
@@ -32,6 +34,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    animation: dark-to-light-bg 0.2s ease-in-out forwards;
 }
 
 #login-form {
@@ -45,6 +49,8 @@
     align-items: center;
     padding: 28px 38px;
     gap: 30px;
+
+    animation: dark-to-light 0.2s ease-in-out forwards;
 }
 
 #form-header {
@@ -74,6 +80,7 @@
 #mode-icon {
     cursor: pointer;
     font-size: 18px;
+    color: var(--purple-dark);
 }
 
 #list-social-media {
@@ -152,7 +159,6 @@
 
     border: none;
     border-radius: 6px;
-    border: 1px solid transparent;
 
     font-family: var(--title-font);
     font-size: 16px;
@@ -162,10 +168,85 @@
     padding: 8px;
     
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #login-button:hover {
-    background: var(--purple-light);
-    border: 1px solid var(--purple-light);
+    background: var(--purple-dark);
+    color: var(--white);
+}
+
+/* classe dark */
+.dark #container {
+    background: var(--color-gradient-dark);
+    animation: light-to-dark-bg 0.2s ease-in-out;
+}
+
+
+.dark #login-form {
+    background-color: var(--purple-darker);
+    color: var(--white);
+    animation: light-to-dark 0.2s ease-in-out;
+}
+
+.dark #login-form .input-field input,
+.dark #login-form .input-box label,
+.dark #login-form .input-field i {
+    color: var(--white);
+}
+
+.dark #mode-icon.fa-sun {
+    color: var(--white);
+}
+
+.dark #forgot-password a {
+    color: var(--purple-light);
+}
+
+.dark #login-button {
+    background: var(--purple-deep);
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+.dark #login-button:hover {
+    background: var(--purple-deeper);
+    color: var(--white);
+}
+
+
+@keyframes dark-to-light {
+    0% {
+        background-color: var(--purple-darker);
+    }
+    100% {
+        background-color: var(--white);
+    }
+}
+
+@keyframes light-to-dark {
+    0% {
+        background-color: var(--white);
+    }
+    100% {
+        background-color: var(--purple-darker);
+    }
+}
+
+@keyframes light-to-dark-bg {
+    from {
+        background: var(--color-gradient-light);
+    }
+    to {
+        background: var(--color-gradient-dark);
+    }
+}
+
+@keyframes dark-to-light-bg {
+    from {
+        background: var(--color-gradient-dark);
+    }
+    to {
+        background: var(--color-gradient-light);
+    }
 }
