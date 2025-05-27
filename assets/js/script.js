@@ -22,7 +22,7 @@ function logar() {
     var password = document.getElementById("password").value;
 
     if (email == "admin" && password == "admin") {
-        alert("Login com sucesso!");
+        location.href = "home.html";
     } else {
         alert("Usuário ou senha inválidos!");
     }
