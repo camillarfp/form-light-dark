@@ -16,3 +16,37 @@
     --title-font: 'Poppins', sans-serif;
     --body-font: 'Nunito', sans-serif;
 }
+
+* {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    background: var(--color-gradient-light);
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-form {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+
+    height: fit-content; /* adjust height to content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 38px;
+    gap: 28px;
+}
+
+#list-social-media img {
+    width: 30px;
+}
