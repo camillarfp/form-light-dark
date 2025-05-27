@@ -35,21 +35,11 @@
 
             <div id="inputs">
                 <div class="input-box">
-                    <label for="name">
-                        Nome
-                        <div class="input-field">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="input-box">
                     <label for="email">
                         Email
                         <div class="input-field">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="text" id="email" name="email" required>
+                            <input type="text" id="email" name="email" id="email" required>
                         </div>
                     </label>
                 </div>
@@ -71,7 +61,7 @@
                 </div>
             </div>
 
-            <button type="submit" id="login-button">
+            <button type="submit" id="login-button" onclick="logar()">
                 Entrar
             </button>
         </form>

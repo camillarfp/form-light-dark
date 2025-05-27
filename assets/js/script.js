@@ -17,3 +17,13 @@ mode.addEventListener("click", () => {
     }
 });
 
+function logar() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if (email == "admin" && password == "admin") {
+        alert("Login com sucesso!");
+    } else {
+        alert("Usuário ou senha inválidos!");
+    }
+}
