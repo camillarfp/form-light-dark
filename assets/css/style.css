@@ -26,8 +26,11 @@
     box-sizing: border-box;
 }
 
-#container {
+body {
     background: var(--color-gradient-light);
+}
+
+#container {
 
     height: 100vh;
     width: 100%;
@@ -38,13 +41,13 @@
     animation: dark-to-light-bg 0.2s ease-in-out forwards;
 }
 
-#login-form {
+#login-form, #register-form {
     background: var(--white);
     border-radius: 8px;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
 
-    height: fit-content; /* adjust height to content */
     display: flex;
+    
     flex-direction: column;
     align-items: center;
     padding: 28px 38px;
@@ -73,7 +76,7 @@
     height: 3px;
     position: absolute;
     content: '';
-    bottom: 5px;
+    bottom: 4px;
     border-radius: 4px;
 }
 
@@ -176,17 +179,17 @@
     color: var(--white);
 }
 
-#register {
+#register, #login {
     font-size: 14px;
 }
 
-#register a {
+#register a, #login a {
     text-decoration: none;
     color: var(--purple-dark);
     transition: color 0.2s ease-in-out;
 }
 
-#register a:hover {
+#register a:hover, #login a:hover {
     color: var(--purple-light);
 }
 
@@ -197,7 +200,7 @@
 }
 
 
-.dark #login-form {
+.dark #login-form, .dark #register-form {
     background-color: var(--purple-darker);
     color: var(--white);
     animation: light-to-dark 0.2s ease-in-out;
@@ -205,7 +208,10 @@
 
 .dark #login-form .input-field input,
 .dark #login-form .input-box label,
-.dark #login-form .input-field i {
+.dark #login-form .input-field i,
+.dark #register-form .input-field input,
+.dark #register-form .input-box label,
+.dark #register-form .input-field i {
     color: var(--white);
 }
 
@@ -226,6 +232,16 @@
 .dark #login-button:hover {
     background: var(--purple-deeper);
     color: var(--white);
+}
+
+.dark #register a, #login a {
+    text-decoration: none;
+    color: var(--purple-light);
+    transition: color 0.2s ease-in-out;
+}
+
+.dark #register a:hover, #login a:hover {
+    color: var(--purple-medium);
 }
 
 
@@ -299,4 +315,41 @@
     bottom: 42%;
     left: 40%;
     border-radius: 4px;
+}
+
+/* cadastro */
+#register-form {
+    
+    max-height: 560px;
+    max-width: 420px;
+    flex-wrap: wrap;
+}
+
+.name-tel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+}
+
+.name-tel input {
+    width: 100%;
+}
+
+#register-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#register-inputs .input-field input {
+    background-color: transparent;
+    color: var(--gray-medium);
+    font-size: 18px;
+
+    width: 120px;
+    border: none;
+    outline: none;
+    padding: 0 5px;
 }
