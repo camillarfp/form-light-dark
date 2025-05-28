@@ -176,6 +176,20 @@
     color: var(--white);
 }
 
+#register {
+    font-size: 14px;
+}
+
+#register a {
+    text-decoration: none;
+    color: var(--purple-dark);
+    transition: color 0.2s ease-in-out;
+}
+
+#register a:hover {
+    color: var(--purple-light);
+}
+
 /* classe dark */
 .dark #container {
     background: var(--color-gradient-dark);
